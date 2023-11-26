@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Include Daisy UI CSS here -->
+    <title>আশ শফি-শপ</title>
+</head>
+<body class="font-sans bg-gray-100">
+
+    <div class="container mx-auto">
+        <!-- Business Logo and Header -->
+        <header class="mt-4 mb-16 text-center">
+            <img src="logo.jpg" alt="Business Logo">
+            <h1 class="text-3xl font-bold mt-2">সুস্বাদু ও কেমিকেল মুক্ত খেজুরের গুড়ের দুনিয়ায় আপনাকে স্বাগতম!</h1>
+        </header>
+
+        <!-- Banner with Features, Images, and Video -->
+        <section class="mt-8">
+            <div class="bg-blue-500 p-4 text-white text-center">
+                <h2 class="text-2xl font-bold">পুরানো মনোভাব নিয়ে নতুন স্বাদে!</h2>
+            </div>
+
+            <div class="mt-8 flex flex-col items-center">
+                <h3 class="text-xl font-bold mb-4">আমাদের বৈশিষ্ট্য</h3>
+                <ul class="list-disc text-left">
+                    <li>স্বাদসের এবং পুরোপুরি প্রাকৃতিক</li>
+                    <li>উচ্চ গুণমানের খেজুর ব্যবহার</li>
+                    <li>সুস্বাদু</li>
+                </ul>
+            </div>
+
+           
+
+            <!-- Video Placeholder -->
+            <div class="mt-8 text-center">
+                <!-- Replace 'your_video_url' with the actual video URL -->
+                <iframe width="560" height="315" src="video.mp4" title="Molasses Video" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+        </section>
+
+        <!-- Molasses Categories -->
+        <div class="mt-8">
+            <h2 class="text-xl font-bold text-center bg-yellow-500 p-2 rounded">আমাদের খেজুরের গুরের ধরনসমুহঃ</h2>
+            <!-- Include dynamic quantity options with prices here -->
+            <ul class="list-disc text-left">
+                <li>পাটালি গুড়</li>
+                <li>ঝোলা গুড়</li>
+                <li>হাজারি গুড়</li>
+                <li>ফয়েল বক্সে সংরক্ষিত গুড়</li>
+                     
+                
+                 
+            </ul>
+             <!-- Image Placeholder -->
+             <div class="mt-8 text-center object-position: center">
+                <img src="one.jpg" alt="Molasses Image" class="max-w-full">
+                <img src="two.jpg" alt="Molasses Image" class="max-w-full">
+                <img src="three.jpg" alt="Molasses Image" class="max-w-full">
+            </div>
+        </div>
+
+        <!-- Quantity Options -->
+        <div class="mt-8">
+            <h2 class="text-xl font-bold text-center">কত কেজি খেজুরের গুড় অর্ডার করতে চাচ্ছেন?</h2>
+            <div class="flex items-center justify-center mt-4">
+                <label for="quantity" class="mr-4">পরিমাণ:</label>
+                <select id="quantity" name="quantity" class="p-2 border border-gray-300">
+                    <option value="1">১ কেজি</option>
+                    <option value="2">২ কেজি</option>
+                    <option value="5">৩ কেজি</option>
+                    <option value="1">৪ কেজি</option>
+                    <option value="2">৫ কেজি</option>
+                    <option value="5">৬ কেজি</option>
+                    <option value="1">৭ কেজি</option>
+                    <option value="2">৮ কেজি</option>
+                    <option value="5">৯ কেজি</option>
+                    <option value="1">১০ কেজি</option>
+                    <option value="2">১১ কেজি</option>
+                    <option value="5">১২ কেজি</option>
+                    <option value="1">১৩ কেজি</option>
+                    <option value="2">১৪ কেজি</option>
+                    <option value="5">১৫ কেজি</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+        </div>
+
+        <!-- Customer Information Form -->
+        <div class="mt-8">
+            <h2 class="text-xl font-bold text-center">গ্রাহকের তথ্য</h2>
+            <form id="orderForm" class="mt-4 text-align: center;">
+                <div class="mb-4">
+                    <label for="name">নাম</label>
+                    <input type="text" id="name" name="name" required class="p-2 border border-gray-300">
+                </div>
+                <div text-align="text-center" class="mb-4">
+                    <label for="mobile">মোবাইল নম্বর</label>
+                    <input type="tel" id="mobile" name="mobile" required class="p-2 border border-gray-300">
+                </div>
+                <div class="mb-4">
+                    <label for="address">ঠিকানা</label>
+                    <textarea id="address" name="address" rows="3" required class="p-2 border border-gray-300"></textarea>
+                </div>
+                <button type="button" onclick="placeOrder()" class=" mt-2 mb-4 bg-blue-500 text-white p-6 rounded w-full" id="orderButton" disabled>অর্ডার করুন</button>
+            </form>
+        </div>
+
+        <footer class="bg-gray-800 text-white py-8 text-center">
+            <ul class="list-none p-2 inline-block">
+                <li class="inline-block mr-4">
+                    <a href="#" target="_blank" class="text-white">
+                        <i class="fa-brands fa-facebook-f fa-fade fa-2xl" style="color: #e0e0e1;"></i>
+                    </a>
+                </li>
+                <li class="inline-block mr-4">
+                    <a href="#" target="_blank" class="text-white">
+                        <i class="fa-brands fa-twitter fa-fade fa-2xl" style="color: #ffffff;"></i>
+                    </a>
+                </li>
+                <li class="inline-block mr-4">
+                    <a href="#" target="_blank" class="text-white">
+                        <i class="fa-brands fa-instagram fa-fade fa-2xl" style="color: #ffffff;"></i>
+                    </a>
+                </li>
+                <li class="inline-block">
+                    <a href="#" target="_blank" class="text-white mr-4">
+                        <i class="fa-brands fa-linkedin fa-fade fa-2xl" style="color: #ffffff;"></i>
+                    </a>
+
+
+                    <a href="#" target="_blank" class="text-white mr-4">
+                        <i class="fa-brands fa-whatsapp fa-fade fa-2xl" style="color: #ffffff;"></i>
+                    </a>
+                    <a href="#" target="_blank" class="text-white">
+                        <i class="fa-brands fa-youtube fa-fade fa-2xl" style="color: #ffffff;"></i>
+                    </a>
+                </li>
+                <!-- Add more social media icons as needed -->
+            </ul>
+            <p class="mt-4">&copy; 2023 Created by Misbah. All rights reserved.</p>
+        </footer>
